@@ -9,6 +9,18 @@ const loadPhone = async (searchValue) => {
 const displayPhone = (phones) => {
   const phoneList = document.getElementById('phone-container');
   phoneList.textContent='';
+  let showBtn=document.getElementById('show-all-btn');
+  if(phones.length > 12) {
+    showBtn.classList.remove('hidden');
+  }
+  else {
+    showBtn.classList.add('hidden');
+
+  }
+
+
+  phones=phones.slice(0,12);
+
 
   phones.forEach((phone) => {
     const phoneCard = document.createElement("div");
