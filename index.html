@@ -27,7 +27,7 @@
       </div>
     </header>
     <main class="container mx-auto">
-      <section class="m-10 flex justify-center">
+      <section class="m-10 flex justify-center ">
         <input
           id="searchText"
           type="text"
@@ -36,15 +36,19 @@
         />
         <button onclick="handleSearch()" class="btn btn-active">Search</button>
       </section>
+      <section id="spinner" class="text-center my-2 hidden">
+        <span class="loading loading-spinner loading-lg"></span>
+      </section>
       <section>
         <div
           id="phone-container"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 "
         ></div>
       </section>
-      <div class="flex justify-center my-4">
-        <button id="show-all-btn" class="btn btn-accent hidden">Show All</button>
-
+      <div class="flex justify-center my-4 ">
+        <button id="show-all-btn" class="btn btn-accent hidden">
+          Show All
+        </button>
       </div>
     </main>
     <footer></footer>
