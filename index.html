@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Hunting Phone API</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar bg-gray-200">
+        <div class="navbar-start">
+          <a class="btn btn-ghost text-xl">Hot Gadgets</a>
+        </div>
+
+        <div class="navbar-end">
+          <a
+            class="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg rounded-md"
+            >Sign</a
+          >
+        </div>
+      </div>
+    </header>
+    <main class="container mx-auto">
+      <section class="m-10">
+        <input
+          id="searchText"
+          type="text"
+          placeholder="Search Here"
+          class="input input-bordered w-full max-w-xs"
+        />
+        <button onclick="handleSearch()" class="btn">Search</button>
+      </section>
+      <section>
+        <div
+          id="phone-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        ></div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="./phone.js"></script>
+  </body>
+</html>
