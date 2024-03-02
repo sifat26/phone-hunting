@@ -1,4 +1,4 @@
-const loadPhone = async (searchValue,showAll) => {
+const loadPhone = async (searchValue='iphone',showAll) => {
   const res = await fetch(
     `https://openapi.programming-hero.com/api/phones?search=${searchValue}`
   );
@@ -70,7 +70,8 @@ const detailbtn=async(id)=>{
   https://openapi.programming-hero.com/api/phone/${id}
   `)
   const data=await res.json()
-  
+
   
 
 }
+loadPhone();
