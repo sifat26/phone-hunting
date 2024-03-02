@@ -70,8 +70,31 @@ const detailbtn=async(id)=>{
   https://openapi.programming-hero.com/api/phone/${id}
   `)
   const data=await res.json()
-
   
+
+  modal(data)
 
 }
 loadPhone();
+
+const modal=(phone)=>{
+  my_modal.showModal();
+  console.log(phone);
+  
+  const modalDesign=document.getElementById('my_modal');
+  modalDesign.innerHTML=`
+  <div class="modal-box">
+          <h3 class="font-bold text-lg">'${phone.data.name}'</h3>
+          <img src="${phone.data.image}">
+          <p class="py-4">Press ESC key or click the button below to close</p>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>`
+        
+  // my_modal.appendChild(modalDesign);
+
+}
